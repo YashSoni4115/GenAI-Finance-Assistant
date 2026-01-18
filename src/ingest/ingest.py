@@ -15,10 +15,10 @@ def pd_df_to_txt(data: pd.DataFrame, output_path: str, filename: str) -> None:
 
 def save_data_to_txt(data: pd.DataFrame, path: str) -> str:
     filename = os.path.splitext(os.path.basename(path))[0]
-    output_path = '../../corpus/' + filename + '.txt'
+    output_path = '../../storage/corpus/' + filename + '.txt'
     pd_df_to_txt(data, output_path, filename)
     return output_path
 
 if __name__ == "__main__":
-    path = '../../data/cibc_finance_terms.csv'
+    path = '../../storage/data/cibc_finance_terms.csv'
     data = load_data(path)
