@@ -16,6 +16,10 @@ Implemented so far:
 - Deterministic text formatting for consistent downstream retrieval
 - Basic traceability using source filename and row number
 - Modular ingestion design intended to be callable when new data is uploaded
+- Text chunking pipeline that converts raw text records into LangChain Documents
+- Configurable chunk sizing with overlap for optimal retrieval
+- Metadata preservation including term, category, source file, and line number
+- Sub-chunking logic for records that exceed the maximum chunk size
 
 The ingestion layer is intentionally isolated from embeddings, retrieval, and UI logic to keep the pipeline debuggable and extensible.
 
